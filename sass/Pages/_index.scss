@@ -7,6 +7,24 @@
     flex-direction: column;
     .nom {
         align-self: flex-end;
+        text-align: right;
+        .tom1 {
+            position: relative;
+            margin: 0 auto;
+            text-align: end;
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            .tom2 {
+                top: 0;
+                width: 100%;
+                position: absolute;
+                font-size: 2rem;
+                color: #979def;
+                left: -5px;
+                text-align: end;
+            }
+        }
     }
     .desc {
         margin-left: 2rem;

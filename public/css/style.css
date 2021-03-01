@@ -454,6 +454,19 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  right: 0px;
+  margin-right: 0px;
+  left: 0px;
+  margin-left: 0px;
+}
+footer :nth-child(1) {
+  margin-left: 2rem;
+}
+footer :nth-child(3) {
+  margin-right: 2rem;
 }
 
 #container {
@@ -548,6 +561,24 @@ footer {
 }
 .flexMain .nom {
   align-self: flex-end;
+  text-align: right;
+}
+.flexMain .nom .tom1 {
+  position: relative;
+  margin: 0 auto;
+  text-align: end;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.flexMain .nom .tom1 .tom2 {
+  top: 0;
+  width: 100%;
+  position: absolute;
+  font-size: 2rem;
+  color: #979def;
+  left: -5px;
+  text-align: end;
 }
 .flexMain .desc {
   margin-left: 2rem;
