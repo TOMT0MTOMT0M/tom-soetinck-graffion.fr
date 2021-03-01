@@ -450,6 +450,12 @@ nav ul li:before {
   display: inline-block;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 #container {
   margin: 0%;
 }
