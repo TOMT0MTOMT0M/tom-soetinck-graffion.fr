@@ -485,10 +485,9 @@ footer :nth-child(3) {
 }
 
 #circle svg {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
-  height: 250px;
   -webkit-animation-name: rotate;
   -moz-animation-name: rotate;
   -ms-animation-name: rotate;
