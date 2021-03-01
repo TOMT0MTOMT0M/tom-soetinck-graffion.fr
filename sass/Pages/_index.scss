@@ -2,13 +2,20 @@
     background-color: $backgroundDark-color;
 }
 
-.desc {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    line-height: 32px;
-     :nth-child(2) {
-        text-align: end;
+.flexMain {
+    display: flex;
+    flex-direction: column;
+    .nom {
+        align-self: flex-end;
+    }
+    .desc {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+        line-height: 32px;
+         :nth-child(2) {
+            text-align: end;
+        }
     }
 }
