@@ -7,45 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOM CV</title>
     <link rel="stylesheet" href="public\css\style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.6.347/build/pdf.min.js"></script>
+    <script src="public\js\pdf.js"></script>
 </head>
 
 <body class="cv">
     <header>
-
-
         <nav>
             <div id="circle">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                <defs>
-                <path
-                  id="circlePath"
-                  d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-                />
-              </defs>
-              <circle cx="150" cy="100" r="75" fill="none" />
-              <g>
-                <use xlink:href="#circlePath" fill="none" />
-                <text fill="#F1E3E4">
-                  <textPath xlink:href="#circlePath">
-                    TOM SOETINCK GRAFFION TOM
-                  </textPath>
-                </text>
-              </g>
-            </svg>
+            <defs>
+              <path
+                id="circlePath"
+                d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+              />
+            </defs>
+            <circle cx="150" cy="100" r="75" fill="none" />
+            <g>
+              <use xlink:href="#circlePath" fill="none" />
+              <text fill="#F1E3E4">
+                <textPath xlink:href="#circlePath">
+                  TOM SOETINCK GRAFFION TOM
+                </textPath>
+              </text>
+            </g>
+          </svg>
             </div>
             <ul>
-                <li><span> <a href="index.html">Accueil</a> </span></li>
-                <li><span><a href="more.html">À propos</a> </span></li>
-                <li><span><a href="projets.html">Projets</a> </span></li>
-                <li><span><a href="cv.html">Curriculum</a> </span></li>
+                <li>
+                    <span> <a href="index.html">Accueil</a> </span>
+                </li>
+                <li>
+                    <span><a href="more.html">À propos</a> </span>
+                </li>
+                <li>
+                    <span><a href="projets.html">Projets</a> </span>
+                </li>
+                <li>
+                    <span><a href="cv.html">Curriculum</a> </span>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
-
-        <section>
-            <iframe src="public\img\TOM SOETINCK--GRAFFION-CV-3WA.pdf" height="200" width="300"></iframe>
-        </section>
+        <canvas id="canvasPDF"></canvas>
     </main>
     <footer>
         <p>© Tous droits réservés</p>
@@ -54,5 +59,6 @@
     </footer>
 </body>
 <script src="public\js\nav.js"></script>
+
 
 </html>

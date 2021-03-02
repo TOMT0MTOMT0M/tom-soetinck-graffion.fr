@@ -618,4 +618,8 @@ body section {
   z-index: 2;
 }
 
+#circle textPath {
+  fill: #979def;
+}
+
 /*# sourceMappingURL=style.css.map */
