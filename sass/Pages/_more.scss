@@ -15,23 +15,31 @@ body {
         height: 100%;
         font-size: 1.5rem;
         line-height: 175%;
+        .glitch {
+            word-break: break-all;
+            +p {
+                border-top: 5px #979def solid;
+                border-left: 5px #979def solid;
+                padding-left: 1rem;
+                box-shadow: inset 5px 5px 5px #979def;
+            }
+        }
+        .cv {
+            text-decoration: line-through;
+            color: inherit;
+        }
         .spotify {
             display: flex;
             justify-content: space-around;
             svg {
                 height: 100%;
+                width: 50px;
                 path {
                     fill: #979def;
                 }
             }
             iframe {
                 border-radius: 20px;
-            }
-        }
-        .cv {
-            a {
-                text-decoration: line-through;
-                color: inherit;
             }
         }
     }
