@@ -1,5 +1,12 @@
-#circle {
-    textPath {
-        fill: $thirdColor;
+.cv {
+    .bar1,
+    .bar2,
+    .bar3 {
+        background-color: $textDark-color;
+    }
+    #circle {
+        textPath {
+            fill: $textBlack-color;
+        }
     }
 }

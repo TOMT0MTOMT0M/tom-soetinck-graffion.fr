@@ -1,53 +1,58 @@
 .index {
     background-color: $backgroundDark-color;
-}
-
-.flexMain {
-    display: flex;
-    flex-direction: column;
-    .nom {
-        align-self: flex-end;
-        text-align: right;
-        font-family: 'Fascinate', cursive;
-        .tom1 {
-            position: relative;
-            margin: 0 auto;
-            text-align: end;
-            font-size: 2rem;
-            margin-top: 2rem;
-            .tom2 {
-                top: 0;
-                width: 100%;
-                position: absolute;
+    .flexMain {
+        display: flex;
+        flex-direction: column;
+        .nom {
+            align-self: flex-end;
+            text-align: right;
+            font-family: 'Fascinate', cursive;
+            .tom1 {
+                position: relative;
+                margin: 0 auto;
+                text-align: end;
                 font-size: 2rem;
-                color: $thirdColor;
-                left: -5px;
+                margin-top: 2rem;
+                .tom2 {
+                    top: 0;
+                    width: 100%;
+                    position: absolute;
+                    font-size: 2rem;
+                    color: $thirdColor;
+                    left: -5px;
+                    text-align: end;
+                }
+            }
+            h1 {
+                margin-top: 0px;
+            }
+        }
+        .desc {
+            display: flex;
+            flex-direction: column;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            line-height: 32px;
+            font-size: 1.5rem;
+            line-height: 175%;
+             :nth-child(2) {
                 text-align: end;
             }
         }
-        h1 {
-            margin-top: 0px;
+    }
+    @keyframes AnimNom1 {
+        from {
+            color: $textLight-color;
+        }
+        to {
+            color: $thirdColor;
         }
     }
-    .desc {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        margin-bottom: 2rem;
-        margin-top: 2rem;
-        line-height: 32px;
-        font-size: 1.5rem;
-        line-height: 175%;
-         :nth-child(2) {
-            text-align: end;
-        }
-    }
-}
-
-@keyframes AnimNom1 {
-    from {
-        color: $textLight-color;
-    }
-    to {
-        color: $thirdColor;
+    .bar1,
+    .bar2,
+    .bar3 {
+        background-color: $textDark-color;
     }
 }

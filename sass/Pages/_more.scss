@@ -1,15 +1,9 @@
-html,
-body {
-    height: 100%;
-    section {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 100%;
-    }
-}
-
 .more {
+    .bar1,
+    .bar2,
+    .bar3 {
+        background-color: $textDark-color;
+    }
     background-color: $backgroundDark-color;
     main {
         font-size: 1.5rem;

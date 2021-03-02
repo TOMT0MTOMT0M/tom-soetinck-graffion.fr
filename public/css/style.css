@@ -7,11 +7,21 @@
   }
 
   /* passer body (et tous les éléments de largeur fixe) en largeur automatique */
-  body {
+  html {
+    height: 100%;
+  }
+  html body {
     width: auto;
     padding: 0;
     margin-left: 2rem;
     margin-right: 2rem;
+    height: 100%;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
   }
 
   /* fixer une largeur maximale de 100% aux éléments potentiellement problématiques */
@@ -461,12 +471,10 @@ nav ul li:before {
 #circle {
   width: 100%;
   overflow: hidden;
-  animation: popup 5s ease-in-out infinite;
   transform-origin: center;
   padding-right: 5rem;
   transition: all 0.5s ease 0s;
 }
-
 #circle svg {
   width: 100%;
   left: 0;
@@ -485,17 +493,29 @@ nav ul li:before {
     transform: rotate(0);
   }
 }
-@keyframes popup {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.3);
-  }
-  100% {
-    transform: scale(1);
-  }
+.hamburgerT {
+  position: absolute;
+  transform: translateX(240%) translateY(205%);
 }
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #F1E3E4;
+  margin: 6px 0;
+  transition: ease 1s;
+}
+
+.change .bar2 {
+  transform: translateY(-11px);
+}
+
+.change .bar3 {
+  transform: rotate(90deg) translate(-5px, 0px);
+}
+
 footer {
   display: flex;
   flex-direction: row;
@@ -521,24 +541,23 @@ footer :nth-child(3) {
 .index {
   background-color: #1C1D21;
 }
-
-.flexMain {
+.index .flexMain {
   display: flex;
   flex-direction: column;
 }
-.flexMain .nom {
+.index .flexMain .nom {
   align-self: flex-end;
   text-align: right;
   font-family: "Fascinate", cursive;
 }
-.flexMain .nom .tom1 {
+.index .flexMain .nom .tom1 {
   position: relative;
   margin: 0 auto;
   text-align: end;
   font-size: 2rem;
   margin-top: 2rem;
 }
-.flexMain .nom .tom1 .tom2 {
+.index .flexMain .nom .tom1 .tom2 {
   top: 0;
   width: 100%;
   position: absolute;
@@ -547,10 +566,12 @@ footer :nth-child(3) {
   left: -5px;
   text-align: end;
 }
-.flexMain .nom h1 {
+.index .flexMain .nom h1 {
   margin-top: 0px;
 }
-.flexMain .desc {
+.index .flexMain .desc {
+  display: flex;
+  flex-direction: column;
   margin-left: 2rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
@@ -559,10 +580,9 @@ footer :nth-child(3) {
   font-size: 1.5rem;
   line-height: 175%;
 }
-.flexMain .desc :nth-child(2) {
+.index .flexMain .desc :nth-child(2) {
   text-align: end;
 }
-
 @keyframes AnimNom1 {
   from {
     color: #F1E3E4;
@@ -571,20 +591,19 @@ footer :nth-child(3) {
     color: #979def;
   }
 }
-html,
-body {
-  height: 100%;
-}
-html section,
-body section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
+.index .bar1,
+.index .bar2,
+.index .bar3 {
+  background-color: #979def;
 }
 
 .more {
   background-color: #1C1D21;
+}
+.more .bar1,
+.more .bar2,
+.more .bar3 {
+  background-color: #979def;
 }
 .more main {
   font-size: 1.5rem;
@@ -618,8 +637,36 @@ body section {
   z-index: 2;
 }
 
-#circle textPath {
-  fill: #979def;
+.cv .bar1,
+.cv .bar2,
+.cv .bar3 {
+  background-color: #979def;
+}
+.cv #circle textPath {
+  fill: #1C1D21;
+}
+
+.projets {
+  background-color: #F1E3E4;
+}
+.projets h1 {
+  color: #1C1D21;
+  text-align: center;
+}
+.projets .projet1 {
+  margin-top: 2rem;
+}
+.projets .projet1 h2 {
+  position: absolute;
+  color: #979def;
+}
+.projets .bar1,
+.projets .bar2,
+.projets .bar3 {
+  background-color: #979def;
+}
+.projets #circle textPath {
+  fill: #1C1D21;
 }
 
 /*# sourceMappingURL=style.css.map */

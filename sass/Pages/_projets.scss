@@ -1,0 +1,24 @@
+.projets {
+    background-color: $backgroundLight-color;
+    h1 {
+        color: $textBlack-color;
+        text-align: center;
+    }
+    .projet1 {
+        margin-top: 2rem;
+        h2 {
+            position: absolute;
+            color: $textDark-color;
+        }
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+        background-color: $textDark-color;
+    }
+    #circle {
+        textPath {
+            fill: $textBlack-color;
+        }
+    }
+}

@@ -2,11 +2,12 @@ let circle = document.querySelector("#circle");
 let svgCircle = document.querySelector('#circle svg');
 let ul = document.querySelector("ul");
 let li = document.querySelectorAll("li");
+let hamburger = document.querySelector(".hamburgerT")
 
 bool = true
 
 function showNav() {
-
+    hamburger.classList.toggle("change");
     if (bool) {
         ul.style.transform = "translateX(0%) translateY(-20%)"
         circle.style.animationPlayState = "paused";
