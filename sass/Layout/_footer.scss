@@ -1,4 +1,5 @@
 footer {
+    font-size: 13px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,10 +17,15 @@ footer {
         text-decoration: none;
         color: inherit;
     }
-     :nth-child(1) {
+    .linkedin {
+        margin-right: 2rem;
+    }
+    .copyright {
         margin-left: 2rem;
     }
-     :nth-child(3) {
-        margin-right: 2rem;
+    .linkedin,
+    .copyright,
+    .trigger {
+        z-index: 1;
     }
 }

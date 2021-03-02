@@ -59,11 +59,25 @@
         </section>
     </main>
     <footer>
-        <p>© Tous droits réservés</p>
-        <p>Mail</p>
-        <p>LinkedIn</p>
+        <div class="masque"></div>
+        <div class="triangle"></div>
+        <div class="carre">
+            <form id="my-form" action="https://formspree.io/f/xzbklygz" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" />
+                <label>Message:</label>
+                <input type="text" name="message" />
+                <button id="my-form-button">Envoyer</button>
+                <p id="my-form-status"></p>
+            </form>
+        </div>
+        <p class="copyright">Copyright © 2021</p>
+        <p class="trigger">Me contacter</p>
+        <p class="linkedin"><a href="https://www.linkedin.com/in/tom-soetinck/">LinkedIn</a></p>
     </footer>
+    <script src="public\js\nav.js"></script>
+    <script src="public\js\form.js"></script>
 </body>
-<script src="public\js\nav.js"></script>
+
 
 </html>

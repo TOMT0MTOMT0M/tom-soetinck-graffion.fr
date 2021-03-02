@@ -72,68 +72,24 @@
         </section>
     </main>
     <footer>
-        <!-- modify this form HTML and place wherever you want your form -->
-
-        <form id="my-form" action="https://formspree.io/f/xzbklygz" method="POST">
-            <label>Email:</label>
-            <input type="email" name="email" />
-            <label>Message:</label>
-            <input type="text" name="message" />
-            <button id="my-form-button">Envoyer</button>
-            <p id="my-form-status"></p>
-        </form>
-        <p>© Tous droits réservés</p>
-        <p>Mail</p>
-        <p><a href="https://www.linkedin.com/in/tom-soetinck/">LinkedIn</a></p>
+        <div class="masque"></div>
+        <div class="triangle"></div>
+        <div class="carre">
+            <form id="my-form" action="https://formspree.io/f/xzbklygz" method="POST">
+                <label>Email:</label>
+                <input type="email" name="email" />
+                <label>Message:</label>
+                <input type="text" name="message" />
+                <button id="my-form-button">Envoyer</button>
+                <p id="my-form-status"></p>
+            </form>
+        </div>
+        <p class="copyright">Copyright © 2021</p>
+        <p class="trigger">Me contacter</p>
+        <p class="linkedin"><a href="https://www.linkedin.com/in/tom-soetinck/">LinkedIn</a></p>
     </footer>
     <script src="public\js\nav.js"></script>
-    <script>
-        window.addEventListener("DOMContentLoaded", function() {
-
-            // get the form elements defined in your form HTML above
-
-            var form = document.getElementById("my-form");
-            var button = document.getElementById("my-form-button");
-            var status = document.getElementById("my-form-status");
-
-            // Success and Error functions for after the form is submitted
-
-            function success() {
-                form.reset();
-                button.style = "display: none ";
-                status.innerHTML = "Merci!";
-            }
-
-            function error() {
-                status.innerHTML = "Oops! Erreur.";
-            }
-
-            // handle the form submission event
-
-            form.addEventListener("submit", function(ev) {
-                ev.preventDefault();
-                var data = new FormData(form);
-                ajax(form.method, form.action, data, success, error);
-            });
-        });
-
-        // helper function for sending an AJAX request
-
-        function ajax(method, url, data, success, error) {
-            var xhr = new XMLHttpRequest();
-            xhr.open(method, url);
-            xhr.setRequestHeader("Accept", "application/json");
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState !== XMLHttpRequest.DONE) return;
-                if (xhr.status === 200) {
-                    success(xhr.response, xhr.responseType);
-                } else {
-                    error(xhr.status, xhr.response, xhr.responseType);
-                }
-            };
-            xhr.send(data);
-        }
-    </script>
+    <script src="public\js\form.js"></script>
 </body>
 
 </html>
