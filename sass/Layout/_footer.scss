@@ -12,6 +12,10 @@ footer {
     background-color: $backgroundDark-color;
     box-shadow: 1px 5px 30px 1px $thirdColor;
     border-top: $thirdColor 1px solid;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
      :nth-child(1) {
         margin-left: 2rem;
     }

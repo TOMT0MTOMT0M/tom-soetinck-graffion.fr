@@ -7,13 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TOM SOETINCK--GRAFFION</title>
     <link rel="stylesheet" href="public\css\style.css" />
-
 </head>
 
 <body class="index">
     <header>
-
-
         <nav>
             <div class="hamburgerT">
                 <div class="bar1"></div>
@@ -21,30 +18,37 @@
                 <div class="bar3"></div>
             </div>
             <div id="circle">
-
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-                    <defs>
-                <path
-                  id="circlePath"
-                  d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-                />
-              </defs>
-              <circle cx="150" cy="100" r="75" fill="none" />
-              <g>
-                <use xlink:href="#circlePath" fill="none" />
-                <text fill="#F1E3E4">
-                  <textPath xlink:href="#circlePath">
-                    TOM SOETINCK GRAFFION TOM
-                  </textPath>
-                </text>
-              </g>
-            </svg>
+            <defs>
+              <path
+                id="circlePath"
+                d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+              />
+            </defs>
+            <circle cx="150" cy="100" r="75" fill="none" />
+            <g>
+              <use xlink:href="#circlePath" fill="none" />
+              <text fill="#F1E3E4">
+                <textPath xlink:href="#circlePath">
+                  TOM SOETINCK GRAFFION TOM
+                </textPath>
+              </text>
+            </g>
+          </svg>
             </div>
             <ul>
-                <li><span> <a href="index.html">Accueil</a> </span></li>
-                <li><span><a href="more.html">À propos</a> </span></li>
-                <li><span><a href="projets.html">Projets</a> </span></li>
-                <li><span><a href="cv.html">Curriculum</a> </span></li>
+                <li>
+                    <span> <a href="index.html">Accueil</a> </span>
+                </li>
+                <li>
+                    <span><a href="more.html">À propos</a> </span>
+                </li>
+                <li>
+                    <span><a href="projets.html">Projets</a> </span>
+                </li>
+                <li>
+                    <span><a href="cv.html">Curriculum</a> </span>
+                </li>
             </ul>
         </nav>
     </header>
@@ -68,11 +72,68 @@
         </section>
     </main>
     <footer>
+        <!-- modify this form HTML and place wherever you want your form -->
+
+        <form id="my-form" action="https://formspree.io/f/xzbklygz" method="POST">
+            <label>Email:</label>
+            <input type="email" name="email" />
+            <label>Message:</label>
+            <input type="text" name="message" />
+            <button id="my-form-button">Envoyer</button>
+            <p id="my-form-status"></p>
+        </form>
         <p>© Tous droits réservés</p>
         <p>Mail</p>
-        <p>LinkedIn</p>
+        <p><a href="https://www.linkedin.com/in/tom-soetinck/">LinkedIn</a></p>
     </footer>
     <script src="public\js\nav.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", function() {
+
+            // get the form elements defined in your form HTML above
+
+            var form = document.getElementById("my-form");
+            var button = document.getElementById("my-form-button");
+            var status = document.getElementById("my-form-status");
+
+            // Success and Error functions for after the form is submitted
+
+            function success() {
+                form.reset();
+                button.style = "display: none ";
+                status.innerHTML = "Merci!";
+            }
+
+            function error() {
+                status.innerHTML = "Oops! Erreur.";
+            }
+
+            // handle the form submission event
+
+            form.addEventListener("submit", function(ev) {
+                ev.preventDefault();
+                var data = new FormData(form);
+                ajax(form.method, form.action, data, success, error);
+            });
+        });
+
+        // helper function for sending an AJAX request
+
+        function ajax(method, url, data, success, error) {
+            var xhr = new XMLHttpRequest();
+            xhr.open(method, url);
+            xhr.setRequestHeader("Accept", "application/json");
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState !== XMLHttpRequest.DONE) return;
+                if (xhr.status === 200) {
+                    success(xhr.response, xhr.responseType);
+                } else {
+                    error(xhr.status, xhr.response, xhr.responseType);
+                }
+            };
+            xhr.send(data);
+        }
+    </script>
 </body>
 
 </html>

@@ -1,14 +1,29 @@
 .projets {
     background-color: $backgroundLight-color;
     h1 {
-        color: $textBlack-color;
+        color: $textDark-color;
         text-align: center;
     }
-    .projet1 {
-        margin-top: 2rem;
-        h2 {
-            position: absolute;
-            color: $textDark-color;
+    .projet {
+        margin-top: 5rem;
+        .projet1 {
+            img {
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+            }
+            .border {
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                background-color: $backgroundDark-color;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h2 {
+                    color: $textLight-color;
+                }
+            }
         }
     }
     .bar1,
@@ -18,7 +33,7 @@
     }
     #circle {
         textPath {
-            fill: $textBlack-color;
+            fill: $textDark-color;
         }
     }
 }

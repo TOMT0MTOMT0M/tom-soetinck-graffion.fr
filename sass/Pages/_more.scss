@@ -16,8 +16,9 @@
             word-break: break-all;
             margin-top: 2rem;
             +p {
-                border-top: 5px $thirdColor solid;
-                border-left: 5px $thirdColor solid;
+                border-top-left-radius: 5px;
+                border-top: 3px $thirdColor solid;
+                border-left: 3px $thirdColor solid;
                 padding-left: 1rem;
                 box-shadow: inset 5px 5px 5px $thirdColor;
             }

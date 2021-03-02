@@ -4,4 +4,9 @@ body {
     font-size: 20;
     color: $textLight-color;
     font-family: 'Abril Fatface', cursive;
+    h1,
+    h2 {
+        font-family: 'Fascinate', cursive;
+        font-size: 2rem;
+    }
 }
