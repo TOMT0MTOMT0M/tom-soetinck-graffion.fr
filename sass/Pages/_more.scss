@@ -22,10 +22,10 @@ body {
             word-break: break-all;
             margin-top: 2rem;
             +p {
-                border-top: 5px #979def solid;
-                border-left: 5px #979def solid;
+                border-top: 5px $thirdColor solid;
+                border-left: 5px $thirdColor solid;
                 padding-left: 1rem;
-                box-shadow: inset 5px 5px 5px #979def;
+                box-shadow: inset 5px 5px 5px $thirdColor;
             }
         }
         .cv {
@@ -37,6 +37,7 @@ body {
             justify-content: end;
             iframe {
                 border-radius: 20px;
+                margin-right: -2rem;
                 z-index: 2;
             }
         }
