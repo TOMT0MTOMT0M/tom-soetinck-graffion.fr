@@ -12,11 +12,15 @@ body {
 .more {
     background-color: $backgroundDark-color;
     main {
-        height: 100%;
         font-size: 1.5rem;
         line-height: 175%;
+        margin-right: 2rem;
+        margin-left: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         .glitch {
             word-break: break-all;
+            margin-top: 2rem;
             +p {
                 border-top: 5px #979def solid;
                 border-left: 5px #979def solid;
@@ -30,16 +34,10 @@ body {
         }
         .spotify {
             display: flex;
-            justify-content: space-around;
-            svg {
-                height: 100%;
-                width: 50px;
-                path {
-                    fill: #979def;
-                }
-            }
+            justify-content: end;
             iframe {
                 border-radius: 20px;
+                z-index: 2;
             }
         }
     }

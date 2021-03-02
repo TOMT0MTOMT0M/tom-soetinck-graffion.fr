@@ -587,12 +587,16 @@ body section {
   background-color: #1C1D21;
 }
 .more main {
-  height: 100%;
   font-size: 1.5rem;
   line-height: 175%;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .more main .glitch {
   word-break: break-all;
+  margin-top: 2rem;
 }
 .more main .glitch + p {
   border-top: 5px #979def solid;
@@ -606,17 +610,11 @@ body section {
 }
 .more main .spotify {
   display: flex;
-  justify-content: space-around;
-}
-.more main .spotify svg {
-  height: 100%;
-  width: 50px;
-}
-.more main .spotify svg path {
-  fill: #979def;
+  justify-content: end;
 }
 .more main .spotify iframe {
   border-radius: 20px;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
