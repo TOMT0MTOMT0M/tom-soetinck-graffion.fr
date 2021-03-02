@@ -614,6 +614,7 @@ body section {
 }
 .more main .spotify iframe {
   border-radius: 20px;
+  margin-right: -2rem;
   z-index: 2;
 }
 
