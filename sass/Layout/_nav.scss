@@ -1,15 +1,17 @@
 nav {
-    position: absolute;
-    top: 15rem;
+    position: fixed;
     left: 0px;
     ul {
         font-size: 2.375rem;
         list-style: none;
+        transform: translateX(-100%);
+        transition: all 1.5s ease 0s;
         li {
             margin-bottom: 2rem;
             width: 12rem;
             height: 3rem;
             width: 100%;
+            transition: all 1s ease 0s;
             span {
                 background-color: $thirdColor;
                 padding-left: 1rem;
