@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&display=swap");
 @media (max-width: 640px) {
     * {
         box-sizing: border-box;
@@ -495,13 +496,15 @@ body {
 nav {
     position: fixed;
     left: 0px;
+    height: 0px;
 }
 
 nav ul {
     font-size: 2.375rem;
     list-style: none;
-    transform: translateX(-100%);
+    transform: translateX(-100%) translateY(-20%);
     transition: all 1.5s ease 0s;
+    padding-left: 0px;
 }
 
 nav ul li {
@@ -541,6 +544,7 @@ nav ul li:before {
     animation: popup 5s ease-in-out infinite;
     transform-origin: center;
     padding-right: 5rem;
+    transition: all 0.5s ease 0s;
 }
 
 #circle svg {
@@ -611,6 +615,8 @@ footer {
     left: 0px;
     margin-left: 0px;
     background-color: #1C1D21;
+    box-shadow: 1px 5px 30px 1px #979def;
+    border-top: #979def 1px solid;
 }
 
 footer :nth-child(1) {
@@ -633,6 +639,7 @@ footer :nth-child(3) {
 .flexMain .nom {
     align-self: flex-end;
     text-align: right;
+    font-family: "Fascinate", cursive;
 }
 
 .flexMain .nom .tom1 {
@@ -641,7 +648,6 @@ footer :nth-child(3) {
     text-align: end;
     font-size: 2rem;
     margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 .flexMain .nom .tom1 .tom2 {
@@ -652,6 +658,10 @@ footer :nth-child(3) {
     color: #979def;
     left: -5px;
     text-align: end;
+}
+
+.flexMain .nom h1 {
+    margin-top: 0px;
 }
 
 .flexMain .desc {
@@ -666,4 +676,67 @@ footer :nth-child(3) {
 
 .flexMain .desc :nth-child(2) {
     text-align: end;
+}
+
+@-webkit-keyframes AnimNom1 {
+    from {
+        color: #F1E3E4;
+    }
+    to {
+        color: #979def;
+    }
+}
+
+@keyframes AnimNom1 {
+    from {
+        color: #F1E3E4;
+    }
+    to {
+        color: #979def;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html section,
+body section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.more {
+    background-color: #1C1D21;
+}
+
+.more main {
+    height: 100%;
+    font-size: 1.5rem;
+    line-height: 175%;
+}
+
+.more main .spotify {
+    display: flex;
+    justify-content: space-around;
+}
+
+.more main .spotify svg {
+    height: 100%;
+}
+
+.more main .spotify svg path {
+    fill: #979def;
+}
+
+.more main .spotify iframe {
+    border-radius: 20px;
+}
+
+.more main .cv a {
+    text-decoration: line-through;
+    color: inherit;
 }

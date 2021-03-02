@@ -9,7 +9,9 @@ footer {
     margin-right: 0px;
     left: 0px;
     margin-left: 0px;
-    background-color: #1C1D21;
+    background-color: $backgroundDark-color;
+    box-shadow: 1px 5px 30px 1px $thirdColor;
+    border-top: $thirdColor 1px solid;
      :nth-child(1) {
         margin-left: 2rem;
     }

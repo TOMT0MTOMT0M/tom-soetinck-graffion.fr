@@ -1,0 +1,38 @@
+html,
+body {
+    height: 100%;
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+}
+
+.more {
+    background-color: $backgroundDark-color;
+    main {
+        height: 100%;
+        font-size: 1.5rem;
+        line-height: 175%;
+        .spotify {
+            display: flex;
+            justify-content: space-around;
+            svg {
+                height: 100%;
+                path {
+                    fill: #979def;
+                }
+            }
+            iframe {
+                border-radius: 20px;
+            }
+        }
+        .cv {
+            a {
+                text-decoration: line-through;
+                color: inherit;
+            }
+        }
+    }
+}

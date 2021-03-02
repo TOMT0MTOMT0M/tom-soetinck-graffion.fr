@@ -8,13 +8,13 @@
     .nom {
         align-self: flex-end;
         text-align: right;
+        font-family: 'Fascinate', cursive;
         .tom1 {
             position: relative;
             margin: 0 auto;
             text-align: end;
             font-size: 2rem;
             margin-top: 2rem;
-            margin-bottom: 2rem;
             .tom2 {
                 top: 0;
                 width: 100%;
@@ -24,6 +24,9 @@
                 left: -5px;
                 text-align: end;
             }
+        }
+        h1 {
+            margin-top: 0px;
         }
     }
     .desc {
@@ -37,5 +40,14 @@
          :nth-child(2) {
             text-align: end;
         }
+    }
+}
+
+@keyframes AnimNom1 {
+    from {
+        color: $textLight-color;
+    }
+    to {
+        color: $thirdColor;
     }
 }
