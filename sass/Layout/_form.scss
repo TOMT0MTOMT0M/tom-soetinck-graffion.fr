@@ -1,7 +1,7 @@
 #my-form {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    max-width: 100%;
     flex-direction: column;
     height: 100%;
     padding-right: 2rem;
@@ -30,8 +30,8 @@
     border-radius: 15px;
     top: 0;
     transform: translate(-50%, 50%);
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
     background-color: $thirdColor;
     position: absolute;
     left: 55%;

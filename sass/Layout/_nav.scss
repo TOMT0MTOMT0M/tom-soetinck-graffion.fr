@@ -13,7 +13,7 @@ nav {
     ul {
         font-size: 2.375rem;
         list-style: none;
-        transform: translateX(-130%) translateY(-20%);
+        transform: translateX(-150%) translateY(-20%);
         transition: all 1.5s ease 0s;
         padding-left: 0px;
         li {
@@ -33,10 +33,12 @@ nav {
             }
         }
         li:before {
-            content: "｜";
-            color: $thirdColor;
-            transform: translateY(-3px);
+            background: $thirdColor;
+            content: "";
             display: inline-block;
+            width: 5px;
+            height: 100%;
+            transform: translateY(10px) scale(1.08);
         }
     }
 }
