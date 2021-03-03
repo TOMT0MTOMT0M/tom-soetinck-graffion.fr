@@ -1,11 +1,19 @@
-nav {
+header {
     position: fixed;
-    left: 0px;
-    height: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 30%);
+    height: 100vh;
     ul {
         font-size: 2.375rem;
         list-style: none;
-        transform: translateX(-100%) translateY(-20%);
+        transform: translateX(-130%) translateY(-20%);
         transition: all 1.5s ease 0s;
         padding-left: 0px;
         li {
@@ -37,20 +45,34 @@ nav {
     margin: 0%;
 }
 
-#circle {
-    width: 100%;
-    overflow: hidden;
-    transform-origin: center;
-    padding-right: 5rem;
-    transition: all 0.5s ease 0s;
-    svg {
+.menu {
+    position: relative;
+    top: -15%;
+    left: -30%;
+    .hamburgerT {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #circle {
         width: 100%;
-        left: 0;
-        top: 0;
-        animation-name: rotate;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        overflow: hidden;
+        transform-origin: center;
+        transition: all 0.5s ease 0s;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        svg {
+            width: 100%;
+            left: 0;
+            top: 0;
+            animation-name: rotate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
     }
 }
 
@@ -63,9 +85,12 @@ nav {
     }
 }
 
-.hamburgerT {
-    position: absolute;
-    transform: translateX(240%) translateY(205%);
+.change .bar2 {
+    transform: translateY(-11px);
+}
+
+.change .bar3 {
+    transform: rotate(90deg) translate(-5px, 0px);
 }
 
 .bar1,
@@ -76,12 +101,4 @@ nav {
     background-color: $textLight-color;
     margin: 6px 0;
     transition: ease 1s;
-}
-
-.change .bar2 {
-    transform: translateY(-11px);
-}
-
-.change .bar3 {
-    transform: rotate(90deg) translate(-5px, 0px);
 }

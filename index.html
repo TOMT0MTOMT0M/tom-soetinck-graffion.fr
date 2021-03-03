@@ -12,30 +12,33 @@
 <body class="index">
     <header>
         <nav>
-            <div class="hamburgerT">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+            <div class="menu">
+                <div class="hamburgerT">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div id="circle">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+              <defs>
+                <path
+                  id="circlePath"
+                  d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+                />
+              </defs>
+              <circle cx="150" cy="100" r="75" fill="none" />
+              <g>
+                <use xlink:href="#circlePath" fill="none" />
+                <text fill="#F1E3E4">
+                  <textPath xlink:href="#circlePath">
+                    TOM SOETINCK GRAFFION TOM
+                  </textPath>
+                </text>
+              </g>
+            </svg>
+                </div>
             </div>
-            <div id="circle">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-            <defs>
-              <path
-                id="circlePath"
-                d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-              />
-            </defs>
-            <circle cx="150" cy="100" r="75" fill="none" />
-            <g>
-              <use xlink:href="#circlePath" fill="none" />
-              <text fill="#F1E3E4">
-                <textPath xlink:href="#circlePath">
-                  TOM SOETINCK GRAFFION TOM
-                </textPath>
-              </text>
-            </g>
-          </svg>
-            </div>
+
             <ul>
                 <li>
                     <span> <a href="index.html">Accueil</a> </span>
@@ -86,7 +89,9 @@
         </div>
         <p class="copyright">Copyright © 2021</p>
         <p class="trigger">Me contacter</p>
-        <p class="linkedin"><a href="https://www.linkedin.com/in/tom-soetinck/">LinkedIn</a></p>
+        <p class="linkedin">
+            <a href="https://www.linkedin.com/in/tom-soetinck/">LinkedIn</a>
+        </p>
     </footer>
     <script src="public\js\nav.js"></script>
     <script src="public\js\form.js"></script>
