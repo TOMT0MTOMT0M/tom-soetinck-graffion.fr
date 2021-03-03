@@ -558,19 +558,20 @@ footer .trigger {
   position: relative;
   margin: 0 auto;
   text-align: end;
-  font-size: 4.644vw;
+  font-size: 7.644vw;
   margin-top: 2rem;
 }
 .index .flexMain .nom .tom1 .tom2 {
   top: 0;
   width: 100%;
   position: absolute;
-  font-size: 4.644vw;
+  font-size: 7.644vw;
   color: #979def;
   left: -5px;
   text-align: end;
 }
 .index .flexMain .nom h1 {
+  font-size: 7.644vw;
   margin-top: 0px;
 }
 .index .flexMain .desc {
@@ -581,7 +582,7 @@ footer .trigger {
   margin-bottom: 2rem;
   margin-top: 2rem;
   line-height: 32px;
-  font-size: 4, 444vw;
+  font-size: 5.444vw;
   line-height: 175%;
 }
 .index .flexMain .desc :nth-child(2) {
