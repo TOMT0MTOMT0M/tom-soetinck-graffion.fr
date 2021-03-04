@@ -1,4 +1,11 @@
 .more {
+    section {
+        height: 80vh;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding-top: 5rem;
+    }
     .bar1,
     .bar2,
     .bar3 {
@@ -13,7 +20,6 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
         .glitch {
-            word-break: break-all;
             margin-top: 2rem;
             +p {
                 border-top-left-radius: 5px;
@@ -28,6 +34,9 @@
             color: inherit;
         }
         .spotify {
+            @include media(">phone", "<=desktop") {
+                display: none;
+            }
             display: flex;
             justify-content: end;
             iframe {

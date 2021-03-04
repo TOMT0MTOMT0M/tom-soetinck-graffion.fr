@@ -9,7 +9,7 @@ bool = true
 function showNav() {
     hamburger.classList.toggle("change");
     if (bool) {
-        ul.style.transform = "translateX(0%) translateY(-20%)"
+        ul.style.transform = "translateX(0%) translateY(65%)"
         circle.style.animationPlayState = "paused";
         circle.style.opacity = "50%"
         svgCircle.style.animationPlayState = "paused";
@@ -17,7 +17,7 @@ function showNav() {
         bool = false
     } else {
 
-        ul.style.transform = "translateX(-150%)  translateY(-20%)"
+        ul.style.transform = "translateX(-150%)  translateY(65%)"
         circle.style.animationPlayState = "running";
         circle.style.opacity = "100%"
         svgCircle.style.animationPlayState = "running";
