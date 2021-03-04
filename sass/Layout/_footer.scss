@@ -23,7 +23,7 @@ footer {
         transform: scale(1.02);
         z-index: -1;
         background-size: 500%;
-        animation: animate 20s infinite;
+        animation: animate 40s infinite;
     }
     .masque::after {
         filter: blur(20px);
@@ -50,8 +50,9 @@ footer {
         margin-left: 2rem;
     }
     .linkedin,
-    .copyright,
     .trigger {
+        align-items: center;
+        display: flex;
         z-index: 1;
     }
 }

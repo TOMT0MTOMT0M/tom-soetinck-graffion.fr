@@ -33,18 +33,12 @@
             text-decoration: line-through;
             color: inherit;
         }
-        .spotify {
-            @include media(">phone", "<=desktop") {
-                display: none;
-            }
-            display: flex;
-            justify-content: end;
-            iframe {
-                border-radius: 20px;
-                margin-right: -2rem;
-                z-index: 2;
-                width: 60%
-            }
-        }
     }
+}
+
+.spotify {
+    @include media(">phone", "<=desktop") {
+        display: none;
+    }
+    z-index: 2;
 }

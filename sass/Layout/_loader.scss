@@ -1,0 +1,116 @@
+.loader {
+    background: url('images/ajax-loader.gif') 50% 50% no-repeat rgba(255, 255, 255, 0.8);
+    cursor: wait;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    .lettre {
+        transform: scale(0);
+        font-size: 5rem;
+        transform-origin: bottom;
+        animation: letter 3s cubic-bezier(.52, .2, .13, .95) infinite;
+    }
+    .lettre:nth-child(3) {
+        animation-delay: 0s;
+    }
+    .lettre:nth-child(4) {
+        animation-delay: 0.1s;
+    }
+    .lettre :nth-child(5) {
+        animation-delay: 0.2s;
+    }
+    .lettre:nth-child(6) {
+        animation-delay: 0.3s;
+    }
+    .lettre:nth-child(7) {
+        animation-delay: 0.4s;
+    }
+    .lettre:nth-child(8) {
+        animation-delay: 0.5s;
+    }
+    .lettre:nth-child(9) {
+        animation-delay: 0.6s;
+    }
+    .lettre:nth-child(10) {
+        animation-delay: 0.7s;
+    }
+    .lettre:nth-child(11) {
+        animation-delay: 0.8s;
+    }
+    .lettre:nth-child(12) {
+        animation-delay: 0.9s;
+    }
+    .thigh {
+        background: black;
+        width: 50px;
+        height: 10px;
+        transform: translateY(-4000%);
+        animation: thigh 2s cubic-bezier(.52, .2, .13, .95) infinite;
+    }
+    .tlow {
+        background: black;
+        width: 10px;
+        height: 50px;
+        transform: translate(-300%, 12%) scaleY(0);
+        transform-origin: bottom;
+        transition: 1s;
+        animation: tlow 2s cubic-bezier(.52, .2, .13, .95) infinite;
+    }
+}
+
+@keyframes letter {
+    0% {
+        transform: rotate(0.1turn) scale(0);
+    }
+    50% {
+        transform: rotate(-0.1turn) scale(0.7);
+    }
+    75% {
+        transform: rotate(0turn) scale(1);
+    }
+    100% {
+        transform: rotate(0turn) scale(0);
+    }
+}
+
+@keyframes tlow {
+    0% {
+        transform: translate(-300%, 12%) scaleY(0);
+    }
+    25% {
+        transform: translate(-300%, 12%) scaleY(0.5);
+    }
+    50% {
+        transform: translate(-300%, 12%) scaleY(0);
+    }
+    75% {
+        transform: translate(-300%, 12%) scaleY(1);
+    }
+    100% {
+        transform-origin: center;
+        transform: translate(-300%, 12%) scaleY(1) rotate(1turn);
+    }
+}
+
+@keyframes thigh {
+    0% {
+        transform: translateY(-4000%);
+    }
+    33% {
+        transform: translateY(-200%);
+    }
+    66% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform-origin: center;
+        transform: translateY(-200%) rotate(1turn);
+    }
+}
