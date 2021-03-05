@@ -48,9 +48,13 @@ let trigger = document.querySelector(".trigger");
 let triangle = document.querySelector(".triangle");
 let carre = document.querySelector(".carre");
 
-function showForm() {
-    carre.classList.toggle("carreOn");
-    triangle.classList.toggle("triangleOn");
-}
+window.addEventListener('click', function(e) {
+    if (document.querySelector('.trigger ').contains(e.target) || document.querySelector('.triangle').contains(e.target) || document.querySelector('.carre').contains(e.target) || document.querySelector('#my-form').contains(e.target)) {
+        carre.classList.add("carreOn");
+        triangle.classList.add("triangleOn");
+    } else {
+        carre.classList.remove("carreOn");
+        triangle.classList.remove("triangleOn");
 
-trigger.addEventListener("click", showForm);
+    }
+})
