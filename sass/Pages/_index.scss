@@ -7,12 +7,18 @@
             align-self: flex-end;
             text-align: right;
             font-family: 'Fascinate', cursive;
+            @include media(">phone") {
+                align-self: flex-start;
+                text-align: left;
+            }
             .tom1 {
                 position: relative;
                 margin: 0 auto;
-                text-align: end;
                 font-size: $szTitre;
                 margin-top: 2rem;
+                @include media(">phone") {
+                    font-size: $szTitreD;
+                }
                 .tom2 {
                     top: 0;
                     width: 100%;
@@ -20,12 +26,17 @@
                     font-size: $szTitre;
                     color: $thirdColor;
                     left: -5px;
-                    text-align: end;
+                    @include media(">phone") {
+                        font-size: $szTitreD;
+                    }
                 }
             }
             h1 {
                 font-size: $szTitre;
                 margin-top: 0px;
+                @include media(">phone") {
+                    font-size: $szTitreD;
+                }
             }
         }
         .desc {
@@ -38,6 +49,9 @@
             line-height: 32px;
             font-size: $szSection;
             line-height: 175%;
+            @include media(">phone") {
+                font-size: $szSectionD;
+            }
              :nth-child(2) {
                 text-align: end;
             }

@@ -12,6 +12,7 @@ bool = true
 function showNav() {
     hamburger.classList.toggle("change");
     if (bool) {
+        ul.style.pointerEvents = "initial";
         li1.style.transform = "translateX(0%)"
         li2.style.transform = "translateX(0%)"
         li3.style.transform = "translateX(0%)"
@@ -22,7 +23,7 @@ function showNav() {
 
         bool = false
     } else {
-
+        ul.style.pointerEvents = "none";
         li1.style.transform = "translateX(-100%)"
         li2.style.transform = "translateX(-100%)"
         li3.style.transform = "translateX(-100%)"

@@ -6,6 +6,9 @@ body {
     h1,
     h2 {
         font-family: 'Fascinate', cursive;
-        font-size: 1.75rem;
+        font-size: $szTitre;
+        @include media(">phone") {
+            font-size: 4rem;
+        }
     }
 }

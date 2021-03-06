@@ -6,7 +6,12 @@
     }
     .projet {
         margin-top: 5rem;
-        .projet1 {
+        .parallax {
+            margin-bottom: 6rem;
+        }
+        .projet1,
+        .projet2 {
+            position: relative;
             img {
                 border-bottom-left-radius: 15px;
                 border-bottom-right-radius: 15px;
@@ -25,6 +30,19 @@
                     color: $textLight-color;
                 }
             }
+            @include media(">phone") {
+                .para {
+                    content: "";
+                    background: $backgroundDark-color;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: -5%;
+                    left: -5%;
+                    z-index: -1;
+                    border-radius: 15px;
+                }
+            }
         }
     }
     .bar1,
@@ -36,5 +54,11 @@
         .textPath {
             fill: $textDark-color;
         }
+    }
+}
+
+@include media(">phone") {
+    .projets .parallax:nth-child(2n) .para {
+        left: 5%;
     }
 }

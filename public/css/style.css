@@ -31,6 +31,16 @@ body {
    */
 main {
   display: block;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 577px) {
+  main {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
 }
 
 /**
@@ -346,6 +356,12 @@ body h2 {
   font-family: "Fascinate", cursive;
   font-size: 1.75rem;
 }
+@media (min-width: 577px) {
+  body h1,
+body h2 {
+    font-size: 4rem;
+  }
+}
 
 .loader {
   background: #1C1D21;
@@ -361,7 +377,7 @@ body h2 {
   align-items: center;
   color: black;
 }
-@media (min-width: 321px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 1024px) {
   .loader {
     display: none;
   }
@@ -467,6 +483,7 @@ body h2 {
 header {
   position: fixed;
   height: 100%;
+  z-index: 1;
 }
 
 nav {
@@ -475,6 +492,7 @@ nav {
   left: 0;
 }
 nav ul {
+  pointer-events: none;
   font-size: 1.75rem;
   list-style: none;
   transform: translateX(0%) translateY(65%);
@@ -495,7 +513,7 @@ nav ul .li3 {
 nav ul li {
   transform: translateX(-150%);
   transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 12rem;
   height: 3rem;
   width: 100%;
@@ -714,12 +732,22 @@ footer .trigger {
   text-align: right;
   font-family: "Fascinate", cursive;
 }
+@media (min-width: 577px) {
+  .index .flexMain .nom {
+    align-self: flex-start;
+    text-align: left;
+  }
+}
 .index .flexMain .nom .tom1 {
   position: relative;
   margin: 0 auto;
-  text-align: end;
   font-size: 1.75rem;
   margin-top: 2rem;
+}
+@media (min-width: 577px) {
+  .index .flexMain .nom .tom1 {
+    font-size: 6rem;
+  }
 }
 .index .flexMain .nom .tom1 .tom2 {
   top: 0;
@@ -728,11 +756,20 @@ footer .trigger {
   font-size: 1.75rem;
   color: #979def;
   left: -5px;
-  text-align: end;
+}
+@media (min-width: 577px) {
+  .index .flexMain .nom .tom1 .tom2 {
+    font-size: 6rem;
+  }
 }
 .index .flexMain .nom h1 {
   font-size: 1.75rem;
   margin-top: 0px;
+}
+@media (min-width: 577px) {
+  .index .flexMain .nom h1 {
+    font-size: 6rem;
+  }
 }
 .index .flexMain .desc {
   display: flex;
@@ -744,6 +781,11 @@ footer .trigger {
   line-height: 32px;
   font-size: 1.25rem;
   line-height: 175%;
+}
+@media (min-width: 577px) {
+  .index .flexMain .desc {
+    font-size: 2rem;
+  }
 }
 .index .flexMain .desc :nth-child(2) {
   text-align: end;
@@ -780,10 +822,11 @@ footer .trigger {
 .more main {
   font-size: 1.5rem;
   line-height: 175%;
-  margin-right: 2rem;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+}
+@media (min-width: 577px) {
+  .more main {
+    font-size: 2rem;
+  }
 }
 .more main .glitch {
   margin-top: 2rem;
@@ -798,15 +841,6 @@ footer .trigger {
 .more main .cv {
   text-decoration: line-through;
   color: inherit;
-}
-
-.spotify {
-  z-index: 2;
-}
-@media (min-width: 321px) and (max-width: 1024px) {
-  .spotify {
-    display: none;
-  }
 }
 
 .cv main div {
@@ -824,6 +858,13 @@ footer .trigger {
   margin-top: 2rem;
   margin-bottom: 4rem;
   height: 100vh;
+  transform: scale(0.8);
+  transform-origin: bottom;
+}
+@media (min-width: 577px) {
+  .cv iframe {
+    transform: scale(1);
+  }
 }
 
 .projets {
@@ -836,12 +877,21 @@ footer .trigger {
 .projets .projet {
   margin-top: 5rem;
 }
-.projets .projet .projet1 img {
+.projets .projet .parallax {
+  margin-bottom: 6rem;
+}
+.projets .projet .projet1,
+.projets .projet .projet2 {
+  position: relative;
+}
+.projets .projet .projet1 img,
+.projets .projet .projet2 img {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   max-width: 100%;
 }
-.projets .projet .projet1 .border {
+.projets .projet .projet1 .border,
+.projets .projet .projet2 .border {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   background-color: #1C1D21;
@@ -851,8 +901,23 @@ footer .trigger {
   justify-content: center;
   align-items: center;
 }
-.projets .projet .projet1 .border h2 {
+.projets .projet .projet1 .border h2,
+.projets .projet .projet2 .border h2 {
   color: #F1E3E4;
+}
+@media (min-width: 577px) {
+  .projets .projet .projet1 .para,
+.projets .projet .projet2 .para {
+    content: "";
+    background: #1C1D21;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -5%;
+    left: -5%;
+    z-index: -1;
+    border-radius: 15px;
+  }
 }
 .projets .bar1,
 .projets .bar2,
@@ -861,6 +926,12 @@ footer .trigger {
 }
 .projets #circle .textPath {
   fill: #979def;
+}
+
+@media (min-width: 577px) {
+  .projets .parallax:nth-child(2n) .para {
+    left: 5%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

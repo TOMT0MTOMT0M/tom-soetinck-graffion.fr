@@ -1,6 +1,7 @@
 header {
     position: fixed;
     height: 100%;
+    z-index: 1;
 }
 
 nav {
@@ -8,6 +9,7 @@ nav {
     top: 0;
     left: 0;
     ul {
+        pointer-events: none;
         font-size: $szTitre;
         list-style: none;
         transform: translateX(0%) translateY(65%);
@@ -27,7 +29,7 @@ nav {
         li {
             transform: translateX(-150%);
             transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             width: 12rem;
             height: 3rem;
             width: 100%;

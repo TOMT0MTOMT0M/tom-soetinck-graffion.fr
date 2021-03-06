@@ -18,5 +18,10 @@
         margin-top: 2rem;
         margin-bottom: 4rem;
         height: 100vh;
+        transform: scale(0.8);
+        transform-origin: bottom;
+        @include media(">phone") {
+            transform: scale(1);
+        }
     }
 }
