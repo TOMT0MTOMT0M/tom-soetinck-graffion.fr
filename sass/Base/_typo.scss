@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
+body {
+    color: $textLight-color;
+    font-family: 'Spectral SC', serif;
+    h1,
+    h2 {
+        font-family: 'Major Mono Display', monospace;
+        font-size: $szTitre;
+        @include media(">phone") {
+            font-size: 4rem;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.cursor {
+    @include media("<phone") {
+        display: none;
+    }
+    pointer-events: none;
+    position: absolute;
+    border: 2px solid $backgroundDark-color;
+    box-shadow: 0 0 0 2px $textLight-color;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: -15px;
+    top: -15px;
+    will-change: tranform;
+    opacity: 1;
+    transition: opacity 2s linear 0s,
+    width 0.3s ease 0s,
+    height 0.3s ease 0s,
+    box-shadow 1s ease 0s;
+    z-index: 99999;
+}

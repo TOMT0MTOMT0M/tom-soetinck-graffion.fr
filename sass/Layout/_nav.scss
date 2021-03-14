@@ -1,0 +1,105 @@
+header {
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    ul {
+        pointer-events: none;
+        font-size: $szTitre;
+        list-style: none;
+        transform: translateX(0%) translateY(65%);
+        padding-left: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .li1 {
+            transition-delay: 0.1s;
+        }
+        .li2 {
+            transition-delay: 0.2s;
+        }
+        .li3 {
+            transition-delay: 0.05s;
+        }
+        li {
+            transform: translateX(-150%);
+            transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+            margin-bottom: 1rem;
+            width: 12rem;
+            height: 3rem;
+            width: 100%;
+            span {
+                background-color: $thirdColor;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+
+#container {
+    margin: 0%;
+}
+
+.menu {
+    position: relative;
+    left: -20%;
+    .hamburgerT {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #circle {
+        width: 200px;
+        overflow: hidden;
+        transform-origin: center;
+        transition: all 0.5s ease 0s;
+        position: relative;
+        svg {
+            width: 100%;
+            left: 0;
+            top: 0;
+            animation-name: rotate;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0);
+    }
+}
+
+.change .bar2 {
+    transform: translateY(-11px);
+}
+
+.change .bar3 {
+    transform: rotate(90deg) translate(-5px, 0px);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 40px;
+    height: 6px;
+    background-color: $textLight-color;
+    margin: 6px 0;
+    transition: ease 1s;
+}

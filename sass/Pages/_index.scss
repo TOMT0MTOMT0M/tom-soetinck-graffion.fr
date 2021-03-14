@@ -1,0 +1,75 @@
+.index {
+    background-color: $backgroundDark-color;
+    .flexMain {
+        display: flex;
+        flex-direction: column;
+        .nom {
+            align-self: flex-end;
+            text-align: right;
+            font-family: 'Fascinate', cursive;
+            @include media(">phone") {
+                align-self: flex-start;
+                text-align: left;
+            }
+            .tom1 {
+                font-family: 'Major Mono Display', monospace;
+                position: relative;
+                margin: 0 auto;
+                font-size: $szTitre;
+                margin-top: 2rem;
+                @include media(">phone") {
+                    font-size: $szTitreD;
+                }
+                .tom2 {
+                    font-family: 'Major Mono Display', monospace;
+                    top: 0;
+                    width: 100%;
+                    position: absolute;
+                    font-size: $szTitre;
+                    color: $thirdColor;
+                    left: -5px;
+                    @include media(">phone") {
+                        font-size: $szTitreD;
+                    }
+                }
+            }
+            h1 {
+                font-size: $szTitre;
+                margin-top: 0px;
+                @include media(">phone") {
+                    font-size: $szTitreD;
+                }
+            }
+        }
+        .desc {
+            display: flex;
+            flex-direction: column;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            line-height: 32px;
+            font-size: $szSection;
+            line-height: 175%;
+            @include media(">phone") {
+                font-size: $szSectionD;
+            }
+             :nth-child(2) {
+                text-align: end;
+            }
+        }
+    }
+    @keyframes AnimNom1 {
+        from {
+            color: $textLight-color;
+        }
+        to {
+            color: $thirdColor;
+        }
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+        background-color: $textDark-color;
+    }
+}

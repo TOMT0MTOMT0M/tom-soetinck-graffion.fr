@@ -1,0 +1,17 @@
+.bar1,
+.bar2,
+.bar3 {
+    background-color: $textDark-color;
+}
+
+#circle {
+    .textPath {
+        fill: $textDark-color;
+    }
+}
+
+@include media(">phone") {
+    .projets .parallax:nth-child(2n) .para {
+        left: 5%;
+    }
+}
