@@ -15,6 +15,5 @@ function parallax(e) {
         tom1.style.transform = `translateX(${x}px) translateY(${y}px)`
         tom2.style.transform = `translateX(${y+2}px) translateY(${x+2}px)`
     }
-
-
 }
+

@@ -39,38 +39,37 @@
                     <div class="bar3"></div>
                 </div>
                 <div id="circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-              <defs>
-                <path
-                  id="circlePath"
-                  d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
-                />
-              </defs>
-              <circle cx="150" cy="100" r="75" fill="none" />
-              <g>
-                <use xlink:href="#circlePath" fill="none" />
-                <text fill="#F1E3E4">
-                    <textPath class="textPath" xlink:href="#circlePath">
-                    TOM SOETINCK GRAFFION TOM
-                  </textPath>
-                </text>
-              </g>
-            </svg>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" width="200px" height="200px" viewBox="0 0 300 300"
+                        enable-background="new 0 0 300 300" xml:space="preserve">
+                        <defs>
+                            <path id="circlePath" d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 " />
+                        </defs>
+                        <circle cx="150" cy="100" r="75" fill="none" />
+                        <g>
+                            <use xlink:href="#circlePath" fill="none" />
+                            <text fill="#F1E3E4">
+                                <textPath class="textPath" xlink:href="#circlePath">
+                                    TOM SOETINCK GRAFFION TOM
+                                </textPath>
+                            </text>
+                        </g>
+                    </svg>
                 </div>
             </div>
 
             <ul>
                 <li class="li1">
-                    <span> <a href="index" >Accueil</a> </span>
+                    <span> <a href="index">Accueil</a> </span>
                 </li>
                 <li class="li2">
-                    <span><a href="more" >À propos</a> </span>
+                    <span><a href="more">À propos</a> </span>
                 </li>
                 <li class="li3">
-                    <span><a href="projets" >Projets</a> </span>
+                    <span><a href="projets">Projets</a> </span>
                 </li>
                 <li class="li4">
-                    <span><a href="cv" >Curriculum</a> </span>
+                    <span><a href="cv">Curriculum</a> </span>
                 </li>
             </ul>
         </nav>
@@ -82,15 +81,19 @@
                 <div class="tom2">TOM</div>
             </div>
             <h1>
-                SOETINCK <br /> GRAFFION
+                <span>S</span><span>O</span><span>E</span><span>T</span><span>I</span><span>N</span><span>C</span><span>K</span>
+                <br />
+                <span>G</span><span>R</span><span>A</span><span>F</span><span>F</span><span>I</span><span>O</span><span>N</span>
             </h1>
         </article>
         <section class="desc">
             <p>
-                Développeur, Intégrateur Web En recherche d'un contrat d'apprentissage ou contrat de professionnalisation Pour une durée de 3 semaines en entreprise pour 1 semaine de cours
+                Développeur, Intégrateur Web En recherche d'un contrat d'apprentissage ou contrat de
+                professionnalisation Pour une durée de 3 semaines en entreprise pour 1 semaine de cours
             </p>
             <p>
-                Developer, Web Integrator Looking for an apprenticeship contract or professionalization contract For a duration of 3 weeks in company for 1 week of classroom course
+                Developer, Web Integrator Looking for an apprenticeship contract or professionalization contract For a
+                duration of 3 weeks in company for 1 week of classroom course
             </p>
         </section>
     </main>
@@ -99,19 +102,18 @@
         <div class="triangle"></div>
         <div class="carre">
             <form id="my-form" action="https://formspree.io/f/xzbklygz" method="POST">
-                <label>Email:</label>
-                <input type="email" name="email" />
-                <label>Message:</label>
-                <input type="text" name="message" />
+                <input type="email" name="email" placeholder="Email:" />
+                <input type="text" name="message" placeholder="Message:" />
                 <button id="my-form-button">Envoyer</button>
                 <p id="my-form-status"></p>
             </form>
         </div>
-        <p class="trigger">Me contacter</p>
+        <a class="trigger">Me contacter</a>
         <p class="linkedin">
             <a href="https://www.linkedin.com/in/tom-soetinck/">LinkedIn</a>
         </p>
     </footer>
+    <script src="public\js\hoverLetter.js"></script>
     <script src="public\js\cursor.js"></script>
     <script src="public\js\nav.js"></script>
     <script src="public\js\form.js"></script>

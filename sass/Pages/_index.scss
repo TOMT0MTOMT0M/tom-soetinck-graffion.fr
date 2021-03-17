@@ -39,6 +39,16 @@
                 @include media(">phone") {
                     font-size: $szTitreD;
                 }
+                span{
+                    display: inline-block;
+                    transition: all 0.4s cubic-bezier(.8,-.5,.2,1.4);
+                    &:hover{
+                        transform: rotate(45deg);
+                    }
+                    &:hover:nth-child(n+9){
+                        transform: rotate(-45deg);
+                    }
+                }
             }
         }
         .desc {
@@ -73,3 +83,12 @@
         background-color: $textDark-color;
     }
 }
+
+color1{
+    filter: drop-shadow(0px 0px 10px $textDark-color);
+}
+
+color2{
+    filter: drop-shadow(0px 0px 10px $textLight-color);
+}
+
